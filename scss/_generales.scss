@@ -35,7 +35,7 @@ h2{
 
 
 h1{
-    font: bold 400% $fuente_ppal;
+    font: bold 600% $fuente_ppal;
     @extend .prop__parrafo;
     align-items: center;    
     padding-left: 30px;
@@ -68,9 +68,9 @@ body{
     align-items: baseline;
     & img{
         border-radius: 10%;
-        width: 10%;
-        height: 10%;
-        margin-left: 10%;
+        width: 8%;
+        height: 8%;
+        margin-left: 5%;
         margin-top: 3%;
         border-style: inset;
         align-items: baseline;       
