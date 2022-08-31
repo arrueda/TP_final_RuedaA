@@ -1,9 +1,10 @@
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:700px){
     
     h3::first-letter{
         font-size:50px;
         line-height:50px;
+        width: 95%;
     }
 
     h3{
@@ -83,8 +84,56 @@
         grid-area: side_bar;        
     }
 
+    /* Fin Crid.*/
+
+    .banda_central{
+        & h3{
+            width: 90%;
+            animation-name: scroll_right;
+        }
+
+        & img{
+            width: calc(20% + 6vw);
+            height: calc(16% + 5vw);
+            margin: auto;
+            animation-name: scroll_left;
+        }
+    }
+
+    @keyframes scroll_left{
+        0%{
+            transform: translateY(20%);
+            opacity: 0;
+        }
     
-    /* Crid. Fin Pagina home -------------------------------*/ 
+        30%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        
+        100%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes scroll_right{
+        100%{
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+    
+        70%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+        }    
+    }    
+    /* Fin Pagina home -------------------------------*/ 
     
     /* Crid. Pagina de YAC -------------------------------*/ 
     #mi_moto_yac{
@@ -198,7 +247,7 @@
 }
 
 
-@media only screen and (min-width:600px) and (max-width:1020px){
+@media only screen and (min-width:700px) and (max-width:1020px){
 
     .header_uno__parrafo_dos{
         font: bold 300% $fuente_ppal;      
@@ -262,13 +311,17 @@
         grid-area: seccion_main3_home;
     }
 
+    .seccion__main img{
+        width: 150px;
+        height: 100px;
+        
+    }
+
     .side_bar{
         display: flex;
         flex-direction: column;
-        background-color: $color_side_fondo;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: auto;
+        background-color: $color_side_fondo;        
+        align-items: center;       
 
         & iframe{
             width: 80%;
@@ -288,8 +341,56 @@
             line-height:50px;
             margin-left: 18px;
         }
+        
+    }
+
+    .banda_central{
+        & h3{
+            width: 90%;
+            animation-name: scroll_right;
+        }
+
+        & img{
+            width: calc(20% + 6vw);
+            height: calc(16% + 5vw);
+            margin: auto;
+            animation-name: scroll_left;
+        }
+    }
+
+    @keyframes scroll_left{
+        0%{
+            transform: translateY(20%);
+            opacity: 0;
+        }
+    
+        30%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        
+        100%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
     }
     
+    @keyframes scroll_right{
+        100%{
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+    
+        70%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+        }    
+    }
     /* Crid. Fin Pagina home -------------------------------*/ 
         
     /* Crid. Pagina de YAC -------------------------------*/ 
@@ -353,8 +454,9 @@
     
     .seccion__main img{
         align-items: flex-end;
+    }
 }
-}
+
 
 @media only screen and (min-width:1020px){
    
@@ -363,7 +465,7 @@
     .main_home{
         display: grid;
         grid-template-columns: 20% auto;
-        grid-auto-rows: 20px auto auto auto;
+        grid-auto-rows: 25px auto auto auto;
         grid-template-areas: "h2_main_home  h2_main_home "
                              "side_bar      seccion_main1_home "
                              "side_bar      seccion_main2_home "
@@ -378,6 +480,7 @@
      
     .side_bar{
         grid-area: side_bar;
+        margin-top: 1.5%;
     }
     
     /* Crid. Fin Pagina home -------------------------------*/ 
@@ -393,7 +496,7 @@
     #mi_moto_yac{
         display: grid;
         grid-template-columns: 20% 79%;   
-        grid-auto-rows: 20px auto auto auto auto;
+        grid-auto-rows: 25px auto auto auto auto;
         grid-template-areas: "h2_yac              h2_yac"        
                              "side_bar        zonte_p1_yac"   
                              "side_bar        zonte_p2_yac"   

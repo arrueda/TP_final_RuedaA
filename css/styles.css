@@ -13,7 +13,7 @@ html {
   color: white; }
 
 h2 {
-  font: bold 90% "Aclonica", sans-serif;
+  font: bold 180% "Aclonica", sans-serif;
   justify-content: space-around;
   font-weight: bold;
   text-align: center;
@@ -30,12 +30,12 @@ h1 {
 .pie {
   background-color: black;
   color: white;
-  font-size: 13px;
+  font-size: 95%;
   text-align: center;
   height: 300%;
   width: 100%;
   line-height: 200%;
-  padding: 2% 5% 0 5%; }
+  padding: 2% 15% 2% 15%; }
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -95,7 +95,7 @@ body {
     text-shadow: 5px 5px 10px blue, -4px -4px 4px #1f13c5, 4px 4px 2px black; } }
 
 .video_head {
-  width: 70%;
+  width: 80%;
   border-radius: 1%;
   border-style: inset;
   display: block;
@@ -118,9 +118,51 @@ h3::first-letter {
   line-height: 50px; }
 
 h3 {
-  padding: 20px 40px 10px 40px;
+  width: 75%;
+  margin: auto;
   color: white;
-  font-size: 90%; }
+  font-size: 100%; }
+
+.banda_central {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2%; }
+  .banda_central img {
+    width: calc(10% + 6vw);
+    height: calc(9% + 5vw);
+    border-radius: 20%;
+    margin: auto auto auto 0;
+    animation-name: scroll_left;
+    animation-duration: 12s;
+    animation-iteration-count: infinite; }
+  .banda_central h3 {
+    width: 40%;
+    animation-name: scroll_right;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite; }
+
+@keyframes scroll_left {
+  0% {
+    transform: translateX(20%);
+    opacity: 0; }
+  30% {
+    transform: translateX(0%);
+    opacity: 1; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes scroll_right {
+  100% {
+    transform: translateX(-20%);
+    opacity: 0; }
+  70% {
+    transform: translateX(0%);
+    opacity: 1; }
+  0% {
+    transform: translateX(0%);
+    opacity: 1; } }
 
 /* Letra capital*/
 p::first-letter {
@@ -130,11 +172,8 @@ p::first-letter {
   border: 1px solid #999999;
   font-size: 80px;
   line-height: 60px;
-  padding: 2px;
   font-family: serif;
-  margin-right: 5px;
-  margin-left: 5%;
-  margin: 2%; }
+  margin-top: -1%; }
 
 /*Fin de letra capital*/
 /* Fin del header*/
@@ -213,12 +252,11 @@ p::first-letter {
   display: flex;
   flex-direction: column;
   background-color: #353758;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-evenly; }
   .side_bar iframe {
     width: 80%;
     border-radius: 2%;
-    margin-top: 5px;
-    margin-bottom: 5px;
     border-style: inset; }
   .side_bar p {
     color: white;
@@ -257,7 +295,8 @@ p::first-letter {
   width: 40%; }
 
 .form_zonte_form h3 {
-  margin-bottom: 8%; }
+  margin-bottom: 6%;
+  margin-top: 2%; }
 
 .row input:hover {
   background-color: #a89adb;
@@ -283,10 +322,11 @@ p::first-letter {
     margin-bottom: 2%; }
 
 /*Fin de viajes Booststrap ------------------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   h3::first-letter {
     font-size: 50px;
-    line-height: 50px; }
+    line-height: 50px;
+    width: 95%; }
   h3 {
     padding: 1.2rem;
     color: white;
@@ -333,7 +373,36 @@ p::first-letter {
       margin-left: 18px; }
   .side_bar {
     grid-area: side_bar; }
-  /* Crid. Fin Pagina home -------------------------------*/
+  /* Fin Crid.*/
+  .banda_central h3 {
+    width: 90%;
+    animation-name: scroll_right; }
+  .banda_central img {
+    width: calc(20% + 6vw);
+    height: calc(16% + 5vw);
+    margin: auto;
+    animation-name: scroll_left; }
+  @keyframes scroll_left {
+    0% {
+      transform: translateY(20%);
+      opacity: 0; }
+    30% {
+      transform: translateY(0%);
+      opacity: 1; }
+    100% {
+      transform: translateY(0%);
+      opacity: 1; } }
+  @keyframes scroll_right {
+    100% {
+      transform: translateY(-20%);
+      opacity: 0; }
+    70% {
+      transform: translateY(0%);
+      opacity: 1; }
+    0% {
+      transform: translateY(0%);
+      opacity: 1; } }
+  /* Fin Pagina home -------------------------------*/
   /* Crid. Pagina de YAC -------------------------------*/
   #mi_moto_yac {
     display: grid;
@@ -401,7 +470,7 @@ p::first-letter {
   .v_zonte {
     margin: auto; } }
 
-@media only screen and (min-width: 600px) and (max-width: 1020px) {
+@media only screen and (min-width: 700px) and (max-width: 1020px) {
   .header_uno__parrafo_dos {
     font: bold 300% "Ibarra Real Nova", serif; }
   .header_uno__parrafo span:nth-child(2n+4) {
@@ -436,13 +505,14 @@ p::first-letter {
     grid-area: seccion_main2_home; }
   .seccion_main3_home {
     grid-area: seccion_main3_home; }
+  .seccion__main img {
+    width: 150px;
+    height: 100px; }
   .side_bar {
     display: flex;
     flex-direction: column;
     background-color: #353758;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto; }
+    align-items: center; }
     .side_bar iframe {
       width: 80%;
       border-radius: 1%;
@@ -456,6 +526,34 @@ p::first-letter {
       font-size: 50px;
       line-height: 50px;
       margin-left: 18px; }
+  .banda_central h3 {
+    width: 90%;
+    animation-name: scroll_right; }
+  .banda_central img {
+    width: calc(20% + 6vw);
+    height: calc(16% + 5vw);
+    margin: auto;
+    animation-name: scroll_left; }
+  @keyframes scroll_left {
+    0% {
+      transform: translateY(20%);
+      opacity: 0; }
+    30% {
+      transform: translateY(0%);
+      opacity: 1; }
+    100% {
+      transform: translateY(0%);
+      opacity: 1; } }
+  @keyframes scroll_right {
+    100% {
+      transform: translateY(-20%);
+      opacity: 0; }
+    70% {
+      transform: translateY(0%);
+      opacity: 1; }
+    0% {
+      transform: translateY(0%);
+      opacity: 1; } }
   /* Crid. Fin Pagina home -------------------------------*/
   /* Crid. Pagina de YAC -------------------------------*/
   #mi_moto_yac {
@@ -497,13 +595,14 @@ p::first-letter {
   .main_home {
     display: grid;
     grid-template-columns: 20% auto;
-    grid-auto-rows: 20px auto auto auto;
+    grid-auto-rows: 25px auto auto auto;
     grid-template-areas: "h2_main_home  h2_main_home " "side_bar      seccion_main1_home " "side_bar      seccion_main2_home " "side_bar      seccion_main3_home ";
     gap: 1em; }
   .h2_main_home {
     grid-area: h2_main_home; }
   .side_bar {
-    grid-area: side_bar; }
+    grid-area: side_bar;
+    margin-top: 1.5%; }
   /* Crid. Fin Pagina home -------------------------------*/
   /* Crid. Pagina de YAC -------------------------------*/
   #mi_moto_yac {
@@ -512,7 +611,7 @@ p::first-letter {
   #mi_moto_yac {
     display: grid;
     grid-template-columns: 20% 79%;
-    grid-auto-rows: 20px auto auto auto auto;
+    grid-auto-rows: 25px auto auto auto auto;
     grid-template-areas: "h2_yac              h2_yac"         "side_bar        zonte_p1_yac"    "side_bar        zonte_p2_yac"    "side_bar        zonte_p3_yac"    "side_bar        zonte_p4_yac";
     gap: 1em; }
   .h2_yac {

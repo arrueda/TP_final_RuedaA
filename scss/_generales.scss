@@ -23,7 +23,7 @@ html{
 }
 
 h2{
-    font: bold 90% $fuente_h2;
+    font: bold 180% $fuente_h2;
     justify-content: space-around;
     font-weight: bold;
     text-align: center;
@@ -44,12 +44,12 @@ h1{
 .pie{
     background-color: black;
     color: $color_fuente;
-    font-size:13px;
+    font-size: 95%;
     text-align: center;
     height: 300%;
     width: 100%;
     line-height: 200%;
-    padding: 2% 5% 0 5%;    
+    padding: 2% 15% 2% 15%;    
 }
 
 body{
@@ -138,7 +138,7 @@ body{
 }
 
 .video_head{
-    width: 70%;
+    width: 80%;
     border-radius: 1%;
     border-style: inset;
     display: block;
@@ -164,11 +164,75 @@ h3::first-letter{
    line-height:50px;
 }
 
-h3{
-    padding: 20px 40px 10px 40px;
+h3{   
+    width: 75%;   
+    margin: auto;
     color:$color_fuente;
-    font-size: 90%;
+    font-size: 100%;
 }
+
+.banda_central{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+
+    & img{
+        width: calc(10% + 6vw);
+        height: calc(9% + 5vw);       
+        border-radius: 20%;
+        margin: auto auto auto 0;
+        animation-name: scroll_left;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        
+    }
+
+    & h3{
+        width: 40%;
+        animation-name: scroll_right;
+        animation-duration: 12s;
+        animation-direction: reverse;
+        animation-iteration-count: infinite;
+        
+    }
+
+    
+}
+
+@keyframes scroll_left{
+    0%{
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    30%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll_right{
+    100%{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    70%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 
 /* Letra capital*/
 p::first-letter{
@@ -177,12 +241,10 @@ p::first-letter{
     background:rgb(2, 1, 39);
     border:1px solid #999999;
     font-size:80px;
-    line-height:60px;
-    padding:2px;
+    line-height:60px;   
     font-family:serif;
-    margin-right: 5px;
-    margin-left: 5%;
-    margin: 2%;
+    margin-top: -1%;
+    
 }
 /*Fin de letra capital*/
 
@@ -274,7 +336,9 @@ p::first-letter{
     margin-top: 5px;
     margin-bottom: 5px;
     border-style: inset;            
-}   
+}
+
+
             
 /*Fin estilos zonte_p1_yac -------------------------*/
 /* Crid. Pagina de YAC -------------------------------*/ 
@@ -284,11 +348,12 @@ p::first-letter{
     flex-direction: column;
     background-color: $color_side_fondo;
     align-items: center;
+    justify-content: space-evenly;
+    
+
     & iframe{
         width: 80%;
-        border-radius: 2%;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        border-radius: 2%;        
         border-style: inset;        
     }
     & p{
@@ -338,7 +403,8 @@ p::first-letter{
 }
 
 .form_zonte_form h3{
-    margin-bottom: 8%;            
+    margin-bottom: 6%;
+    margin-top: 2%;            
 }
 
 .row input:hover{
